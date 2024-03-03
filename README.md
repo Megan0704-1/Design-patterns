@@ -6,7 +6,7 @@
     javac -d bin src/NativePizza/*.java src/NativePizza/**/*.java
     java -cp bin Native.Main
     ```
-- Decorator pattern (CoffeShop)
+- Decorator.pattern (CoffeShop)
   If you want to visualize the result, run the following command in /bin/bash
     ```bash
     cd Decorator.Pattern/public
@@ -14,7 +14,7 @@
     ```
 
 # Prerequsite
-```
+```bash
 # Ubuntu Environment
 apt update && apt upgrade -y
 # install jdk
