@@ -1,8 +1,9 @@
-package factorypizza.factory;
+package ext_nativepizza.factory;
 
-import factorypizza.pizzas.*;
+import ext_nativepizza.pizzas.Pizza;
+import ext_nativepizza.NYpizzas.*;
 
-public class SimplePizzaFactory {
+public class NYPizzaFactory extends SimplePizzaFactory{
     public Pizza createPizza(String type){
         Pizza pizza = null;
 
