@@ -1,6 +1,6 @@
-package NativePizza.factory;
+package nativepizza.factory;
 
-import NativePizza.pizzas.*;
+import nativepizza.pizzas.*;
 
 public class SimplePizzaFactory {
     public Pizza createPizza(String type){

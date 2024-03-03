@@ -1,7 +1,7 @@
-package NativePizza;
+package factorypizza;
 
-import NativePizza.factory.*;
-import NativePizza.pizzas.Pizza;
+import factorypizza.factory.*;
+import factorypizza.pizzas.Pizza;
 
 public class Main{
     public static void main(String[] args){

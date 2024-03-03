@@ -1,8 +1,8 @@
-package NativePizza.pizzas;
+package nativepizza.pizzas;
 
-public class ClamPizza extends Pizza {
-    public ClamPizza() {
-        name = "Clam Pizza";
+public class PepperoniPizza extends Pizza {
+    public PepperoniPizza() {
+        name = "Pepperoni Pizza";
         dough = "Refular Crust";
         sauce = "Marinara Pizza Sauce";
         toppings.add("Mozzarella");
@@ -11,19 +11,19 @@ public class ClamPizza extends Pizza {
 
     @Override
     public void prepare(){
-        System.out.println("Preparing Clam Pizza");
+        System.out.println("Preparing Pepperoni Pizza");
     }
     @Override
     public void bake(){
-        System.out.println("Baking Clam Pizza");
+        System.out.println("Baking Pepperoni Pizza");
     }
     @Override
     public void cut(){
-        System.out.println("Cutting Clam Pizza");
+        System.out.println("Cutting Pepperoni Pizza");
     }
     @Override
     public void box(){
-        System.out.println("Boxing Clam Pizza");
+        System.out.println("Boxing Pepperoni Pizza");
     }
 
     // we can override the prepare method if the preparation of a pizza is different.

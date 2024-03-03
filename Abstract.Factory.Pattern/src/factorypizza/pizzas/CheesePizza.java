@@ -1,4 +1,4 @@
-package NativePizza.pizzas;
+package factorypizza.pizzas;
 
 public class CheesePizza extends Pizza {
     public CheesePizza() {

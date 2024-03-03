@@ -1,6 +1,6 @@
-package FactoryPizza.factory;
+package factorypizza.factory;
 
-import FactoryPizza.pizzas.*;
+import factorypizza.pizzas.*;
 
 public class SimplePizzaFactory {
     public Pizza createPizza(String type){

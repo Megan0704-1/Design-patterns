@@ -1,4 +1,4 @@
-package NativePizza.pizzas;
+package nativepizza.pizzas;
 
 import java.util.ArrayList;
 

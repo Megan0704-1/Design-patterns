@@ -1,7 +1,7 @@
-package NativePizza;
+package nativepizza;
 
-import NativePizza.factory.*;
-import NativePizza.pizzas.*;
+import nativepizza.factory.*;
+import nativepizza.pizzas.*;
 
 public class PizzaStore{
     SimplePizzaFactory factory;
