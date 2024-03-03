@@ -1,6 +1,9 @@
 # Design-patterns
 
 To replicate the result, run the following command in shell
+```bash
+git clone https://github.com/Megan0704-1/Design-patterns.git
+```
 
 - Abstract.Factory.Pattern (Native Pizza Store)
     ```bash
