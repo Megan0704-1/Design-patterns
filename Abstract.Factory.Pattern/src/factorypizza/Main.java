@@ -10,11 +10,11 @@ public class Main{
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
 
-        System.out.println("NY Store:\n");
+        System.out.println("\nNY Store:");
         NYPizzaStore nystore = new NYPizzaStore();
         Pizza nypizza = nystore.orderPizza(type);
         
-        System.out.println("TX Store:\n");
+        System.out.println("\nTX Store:");
         TXPizzaStore txstore = new TXPizzaStore();
         Pizza txpizza = txstore.orderPizza(type);
     }

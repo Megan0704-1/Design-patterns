@@ -5,24 +5,17 @@ import factorypizza.pizzas.Pizza;
 public class CheesePizza extends Pizza {
     public CheesePizza() {
         name = "TX Cheese Pizza";
-        dough = "Thin Crust";
-        sauce = "Texas Pizza Sauce";
-        toppings.add("Mozzarella");
+        dough = "Extra Thick Crust";
+        sauce = "Potato Sauce";
+        toppings.add("Tomato");
         toppings.add("Parmesan");
     }
 
     @Override
-    public void prepare(){
-        System.out.println("Preparing TX Cheese Pizza");
-    }
-    @Override
-    public void bake(){
-        System.out.println("Baking TX Cheese Pizza");
-    }
-    @Override
     public void cut(){
-        System.out.println("Cutting TX Cheese Pizza");
+        System.out.println("Cutting pizzas into square slices");
     }
+
     @Override
     public void box(){
         System.out.println("Boxing TX Cheese Pizza");

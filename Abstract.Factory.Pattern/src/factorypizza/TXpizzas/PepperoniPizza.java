@@ -12,18 +12,6 @@ public class PepperoniPizza extends Pizza {
     }
 
     @Override
-    public void prepare(){
-        System.out.println("Preparing TX Pepperoni Pizza");
-    }
-    @Override
-    public void bake(){
-        System.out.println("Baking TX Pepperoni Pizza");
-    }
-    @Override
-    public void cut(){
-        System.out.println("Cutting TX Pepperoni Pizza");
-    }
-    @Override
     public void box(){
         System.out.println("Boxing TX Pepperoni Pizza");
     }
