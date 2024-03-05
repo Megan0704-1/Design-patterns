@@ -8,8 +8,15 @@ git clone https://github.com/Megan0704-1/Design-patterns.git
 - Abstract.Factory.Pattern (Native Pizza Store)
     ```bash
     cd Abstract.Factory.Pattern
-    javac -d bin src/NativePizza/*.java src/NativePizza/**/*.java
-    java -cp bin Native.Main
+    # Simple Factory Pattern
+    javac -d bin src/nativepizza/*.java src/nativepizza/**/*.java
+    java -cp bin nativepizza.Main
+    # Extended ver of Simple Factory Pattern
+    javac -d bin src/ext_nativepizza/*.java src/ext_nativepizza/**/*.java
+    java -cp bin ext_nativepizza.Main
+    # Abstract Factory Pattern
+    javac -d bin src/factorypizza/*.java src/factorypizza/**/*.java
+    java -cp bin factorypizza.Main
     ```
 - Decorator.pattern (CoffeShop)
     ```bash
