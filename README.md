@@ -17,6 +17,9 @@ git clone https://github.com/Megan0704-1/Design-patterns.git
     # Abstract Factory Pattern
     javac -d bin src/factorypizza/*.java src/factorypizza/**/*.java
     java -cp bin factorypizza.Main
+
+    # prompt: tonight, I would like to have some...
+    # options: cheese, clam, pepperoni
     ```
 - Decorator.pattern (CoffeShop)
     ```bash
