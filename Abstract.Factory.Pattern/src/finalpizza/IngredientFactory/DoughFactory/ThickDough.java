@@ -1,5 +1,15 @@
 package finalpizza.IngredientFactory.DoughFactory;
 
 public class ThickDough implements Dough {
-    public String description = "Thick Crust Dough";
+    private String name;
+    
+    public ThickDough(){
+        this.name = "Thick Crust Dough";
+    }
+
+    @Override
+    public String getName(){
+        return this.name;
+    }
 }
+

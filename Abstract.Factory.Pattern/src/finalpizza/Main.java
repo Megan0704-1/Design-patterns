@@ -1,28 +1,21 @@
-package ext_nativepizza;
+package finalpizza;
 
-import ext_nativepizza.factory.*;
-import ext_nativepizza.pizzas.Pizza;
+import finalpizza.pizzas.Pizza;
+import finalpizza.stores.*;
 import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        System.out.println("tonight, I would like to have some...");
+        System.out.println("tonight, I would like to have some... Pizza!");
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
 
-        System.out.println("Regular store:\n");
-        SimplePizzaFactory factory = new SimplePizzaFactory();
-        PizzaStore store = new PizzaStore(factory);
-        Pizza pizza = store.orderPizza(type);
-        
-        System.out.println("NY Store:\n");
-        NYPizzaFactory nyfactory = new NYPizzaFactory();
-        PizzaStore nystore = new PizzaStore(nyfactory);
+        System.out.println("\nNY Store:");
+        NYPizzaStore nystore = new NYPizzaStore();
         Pizza nypizza = nystore.orderPizza(type);
         
-        System.out.println("TX Store:\n");
-        TXPizzaFactory txfactory = new TXPizzaFactory();
-        PizzaStore txstore = new PizzaStore(txfactory);
+        System.out.println("\nTX Store:");
+        TXPizzaStore txstore = new TXPizzaStore();
         Pizza txpizza = txstore.orderPizza(type);
     }
 }

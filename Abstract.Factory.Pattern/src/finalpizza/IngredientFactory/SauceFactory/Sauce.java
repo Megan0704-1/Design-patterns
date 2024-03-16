@@ -1,5 +1,5 @@
 package finalpizza.IngredientFactory.SauceFactory;
 
-public interface Sauce{
-    public String description="";
+public interface Sauce {
+    String getName();
 }
