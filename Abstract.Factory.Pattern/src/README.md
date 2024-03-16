@@ -1,7 +1,7 @@
 There are four folders in ./src/
 
 1. **nativepizza**
-This is a dependent version of pizza store, no pattern is applied. 
+This is a dependent version of pizza store implementation, no pattern is applied. 
 > Classes are dependent to each other
 
 2. **ext_nativepizza**
