@@ -11,7 +11,7 @@ export ROOT_PATH=${PWD}
     ```bash
     # automated build process
     cd Abstract.Factory.Pattern/scripts
-    source build-linux.sh
+    chmod u+x build-linux.sh
     ./build-linux.sh
 
     # Run compiled programs
