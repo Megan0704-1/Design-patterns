@@ -14,7 +14,7 @@ git clone https://github.com/Megan0704-1/Design-patterns.git
     # Extended ver of Simple Factory Pattern
     javac -d bin src/ext_nativepizza/*.java src/ext_nativepizza/**/*.java
     java -cp bin ext_nativepizza.Main
-    # Abstract Factory Pattern
+    # Factory Method Pattern
     javac -d bin src/factorypizza/*.java src/factorypizza/**/*.java
     java -cp bin factorypizza.Main
 
