@@ -4,12 +4,12 @@ There are four folders in ./src/
 This is a dependent version of pizza store, no pattern is applied. 
 > Classes are dependent to each other
 
-2. factorypizza
+2. ext_nativepizza
 This is an advance version of pizza store, Simple Factory pattern is applied.
 > Separate object creation with main pizza store logic. One factory responsible for all pizza product instantiation.
 
-3. ext_nativepizza
-This folder implements Factory method pizza store, Extend the flexibility from factorypizza.
+3. factorypizza
+This folder implements Factory method pizza store, Extend the flexibility from ext_nativepizza.
 > To make simple factory pattern more flexible, I create multiple factories to eliminate dependencies of instantiations on one factory.
 
 4. finalpizza
