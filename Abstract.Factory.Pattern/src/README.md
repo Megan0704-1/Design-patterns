@@ -5,7 +5,7 @@ This is a dependent version of pizza store implementation, no pattern is applied
 > Classes are dependent to each other
 
 2. **ext_nativepizza**
-This is an advance version of *native* pizza store, Simple Factory pattern is applied.
+This is an advance version of *nativepizza*, Simple Factory pattern is applied.
 > Separate object creation with main pizza store logic. One factory responsible for all pizza product instantiation.
 
 3. **factorypizza**
