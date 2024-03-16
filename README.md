@@ -3,21 +3,22 @@
 To replicate the result, run the following command in shell
 ```bash
 git clone https://github.com/Megan0704-1/Design-patterns.git
+cd Design-patterns
+export ROOT_PATH=${PWD}
 ```
 
-- Abstract.Factory.Pattern (Native Pizza Store)
+- Abstract.Factory.Pattern (Pizza Store)
     ```bash
-    cd Abstract.Factory.Pattern
-    # Simple Factory Pattern
-    javac -d bin src/nativepizza/*.java src/nativepizza/**/*.java
-    java -cp bin nativepizza.Main
-    # Extended ver of Simple Factory Pattern
-    javac -d bin src/ext_nativepizza/*.java src/ext_nativepizza/**/*.java
-    java -cp bin ext_nativepizza.Main
-    # Factory Method Pattern
-    javac -d bin src/factorypizza/*.java src/factorypizza/**/*.java
-    java -cp bin factorypizza.Main
+    # automated build process
+    cd Abstract.Factory.Pattern/scripts
+    source build-linux.sh
+    ./build-linux.sh
 
+    # Run compiled programs
+    ./run-native.sh
+    ./run-ext.sh
+    ./run-factory.sh
+    ./run-final.sh
     # prompt: tonight, I would like to have some...
     # options: cheese, clam, pepperoni
     ```
