@@ -1,18 +1,21 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from config import DevelopConfig, TestingConfig, ProductionConfig
 from flask import redirect, url_for
+from config import DevelopConfig
+from extensions import db, login_manager
+from .models.models import User
 
-db = SQLAlchemy()
-login_manager = LoginManager()
-
-def create_app(config_class):
+def create_app(config_class=DevelopConfig):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
     db.init_app(app)
     login_manager.init_app(app)
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
 
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix="/auth")

@@ -16,9 +16,9 @@ In SQLAlchemy, ORM tool with Flask, the table relationships are managed through 
 
 '''
 
-from app import db
+from extensions import db
 from flask_login import UserMixin
-
+from datetime import datetime
 
 # User Model for storing user info
 class User(UserMixin, db.Model):
@@ -42,9 +42,10 @@ class User(UserMixin, db.Model):
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
-    content = db.Column(db.Text, nullable=False)
+    body = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     comments = db.relationship('Comment', back_populates='post')
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     user = db.relationship('User', back_populates='post')
     likes = db.relationship('Like', back_populates='post')
@@ -70,7 +71,7 @@ class Profile(db.Model):
 
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.Text, nullable=False)
+    body = db.Column(db.Text, nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 

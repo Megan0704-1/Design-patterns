@@ -1,11 +1,23 @@
-from app import create_app, db
+# Utility Script, a setup tool
 
-app = create_app()
+import os
+from extensions import db
+from app import create_app
+from config import DevelopConfig, TestingConfig, ProductionConfig
 
-with app.app_context():
-    db.create_all()
+env_config = {
+        'developement' : DevelopConfig,
+        'testing': TestingConfig,
+        'production': ProductionConfig
+        }
+
+config_name = os.getenv('FLASK_ENV', 'development')
+config_class = env_config.get(config_name, DevelopConfig)
+app = create_app(config_class)
+
 
 if __name__ == '__main__':
-    print('Initializing the database...')
-    db.create_all()
-    print('Database initialized.')
+    with app.app_context():
+        print("Initializing Database.")
+        db.create_all()
+        print('Database initialized.')

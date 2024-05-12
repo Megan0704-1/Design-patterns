@@ -4,13 +4,14 @@ from flask_login import login_required, current_user
 from app import db
 from app.models.models import Post
 
-
+# Home
 @blog.route('/')
 def index():
     posts = Post.query.all()
     return render_template('index.html', posts = posts)
 
 
+# Create new Post
 @blog.route('/post/new', methods=['GET', 'POST'])
 @login_required
 def new_post():
@@ -24,6 +25,7 @@ def new_post():
         return redirect(url_for('blog.index'))
     return render_template('new_post.html')
 
+# Find post
 @blog.route('/post/find', methods=['GET', 'POST'])
 @login_required
 def find_post():
@@ -33,15 +35,17 @@ def find_post():
         post = Post.query.get(post_id)
     return render_template('view_post.html', post = post)
 
+# View post
 @blog.route('/post/<int:post_id>', methods = ['GET'])
-def post(post_id):
+def view_post(post_id):
     '''
     View a specific post
     '''
     post = Post.query.get_or_404(post_id)
-    return render_template('post.html', post = post)
+    return render_template('view_post.html', post = post)
 
 
+# Edit post
 @blog.route('/post/<int:post_id>/edit', methods = ['GET', 'POST'])
 @login_required
 def edit_post(post_id):
@@ -49,22 +53,31 @@ def edit_post(post_id):
     Edit a specific post.
     '''
     post = Post.query.get_or_404(post_id)
+    if current_user.id != post.user.id:
+        flash("You are not authorized to edit this post.")
+        return redirect(url_for("blog.view_post", post_id=post.id))
+
     if request.method == 'POST':
-        post.title = request.form['title']
-        post.content = request.form['body']
-        db.session.commit()
-        flash('Post updated!')
-        return redirect(url_for('blog.post', post_id=post.id))
+        if 'title' in request.form and 'body' in request.form:
+            post.title = request.form['title']
+            post.body = request.form['body']
+            db.session.commit()
+            flash("Post Update!")
+            return redirect(url_for("blog.view_post", post_id = post.id))
+        else:
+            flash("Error: All form fields are required.")
+
     return render_template('edit_post.html', post = post)
 
 
+# Delete Post
 @blog.route('/post/<int:post_id>/delete', methods = ['POST'])
 @login_required
 def delete_post(post_id):
     '''
     Delete a specific post.
     '''
-    post = Post.query.geti_or_404(post_id)
+    post = Post.query.get_or_404(post_id)
     if(post):
         db.session.delete(post)
         db.session.commit()

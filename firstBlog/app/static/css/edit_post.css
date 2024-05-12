@@ -1,0 +1,59 @@
+body {
+    font-family:"Times New Roman";
+    padding: 25px;
+    background-color: #f4f4f4;
+}
+
+.title {
+    color: #5C6AC4;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.btn-primary, .btn-warning, .btn-danger {
+    width: 100px;
+}
+
+.btn-container {
+    display:flex;
+    justify-content: space-between;
+}
+
+.navbar-toggler {
+    display: block !important; /* Forces the toggler to always display */
+}
+
+#sidebar {
+height: auto; /* Adjust the height to account for the navbar */
+width: 0; /* Sidebar initially collapsed */
+position: fixed;
+margin-right: 20;
+top: 90px; /* Start below the navbar */
+right: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: width 0.3s ease;
+z-index: 1000;
+}
+
+#sidebar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: rgba(255,255,255,0.1); /* Semi-transparent highlight */
+}
+
+.main-content {
+    padding: 16px;
+    transition: padding-right 0.3s ease;
+}

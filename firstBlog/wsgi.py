@@ -5,7 +5,8 @@ Note. before running the app, please set the environment variable: export FLASK_
 '''
 
 import os
-from app import create_app, DevelopConfig, TestingConfig, ProductionConfig
+from config import DevelopConfig, TestingConfig, ProductionConfig
+from app import create_app
 
 env_config = {
         'development': DevelopConfig,
